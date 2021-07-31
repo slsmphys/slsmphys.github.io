@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans";
+}
+
+.c-main-header {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+  background-color: #212121;
+}
+
+.c-main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+}
+@media only screen and (min-width: 1000px) {
+  .c-main-nav {
+    flex-direction: row;
+  }
+}
+.c-main-nav__mobile-nav {
+  height: 48px;
+  width: 48px;
+  background: url("../../assets/images/burger-nav.png");
+  background-repeat: no-repeat;
+  background-position: 13px 12px;
+  color: transparent;
+}
+@media only screen and (min-width: 1000px) {
+  .c-main-nav__mobile-nav {
+    display: none;
+  }
+}
+.c-main-nav__items-wrapper {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  height: 0;
+  overflow: hidden;
+}
+.c-main-nav__items-wrapper.expanded {
+  height: auto;
+}
+@media only screen and (min-width: 1000px) {
+  .c-main-nav__items-wrapper {
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.c-main-nav__item {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+.c-main-nav__item-link {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  text-decoration: none;
+  border-bottom: 2px solid #424242;
+  color: #ffffff;
+}
+@media only screen and (min-width: 1000px) {
+  .c-main-nav__item-link {
+    border-bottom: none;
+  }
+}
+.c-main-nav__item-link:hover {
+  background-color: #219653;
+}
