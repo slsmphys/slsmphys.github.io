@@ -1,0 +1,69 @@
+.c-main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $max-page-width;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+
+    @media only screen and (min-width: $desktop) {
+        flex-direction: row;
+    }
+
+    &__mobile-nav {
+        height: 48px;
+        width: 48px;
+        background: url($image-path + "burger-nav.png");
+        background-repeat: no-repeat;
+        background-position: 13px 12px;
+        color: transparent;
+
+        @media only screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+
+    &__items-wrapper {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        height: 0;
+        overflow: hidden;
+
+        &.expanded {
+            height: auto;
+        }
+
+        @media only screen and (min-width: $desktop) {
+            height: auto;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        font-size: 1.4rem;
+        color: $white;
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 24px;
+        text-decoration: none;
+        border-bottom: 2px solid $grey800;
+        color: $white;
+
+        @media only screen and (min-width: $desktop) {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: $green;
+        }
+    }
+}
